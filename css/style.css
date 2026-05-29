@@ -448,7 +448,7 @@ background: linear-gradient(0deg,rgba(0, 204, 204, 1) 0%, rgba(96, 0, 191, 1) 40
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	gap: 3em;
+	gap: 5em;
 }
 .maxa-megakoncert .text-box-1 {
 	display: -webkit-box;
