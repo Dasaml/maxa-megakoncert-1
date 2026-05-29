@@ -40,15 +40,14 @@
   }
 
   /* ==========================================================================
-     2. OVLÁDÁNÍ MENU (Hamburger a plynulý scroll)
+     2. OVLÁDÁNÍ MENU (Hamburger a plynulý scroll pro všechny kotvy)
   ========================================================================== */
   const menu = select(".menu");
   const hamburger = select(".hamburger");
   const menuIcon = select(".svg-menu");
   const closeIcon = select(".svg-menu-close");
   
-  // Výběr všech odkazů z mobilního i desktopového menu
-  const allNavLinks = select(".site-header nav a", true);
+  const allAnchorLinks = select('a[href^="#"]', true);
 
   function toggleMenu() {
     if (!menu || !menuIcon || !closeIcon || !hamburger) return;
@@ -56,7 +55,6 @@
     menu.classList.toggle("showMenu");
     const isMenuNowOpen = menu.classList.contains("showMenu");
     
-    // Aktualizace aria-expanded pro čtečky obrazovky
     hamburger.setAttribute("aria-expanded", isMenuNowOpen);
     
     if (isMenuNowOpen) {
@@ -72,7 +70,7 @@
     hamburger.addEventListener("click", toggleMenu);
   }
 
-  allNavLinks.forEach(link => {
+  allAnchorLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
