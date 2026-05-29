@@ -23,8 +23,8 @@ body.maxa-megakoncert {
 	margin: 0;
 	padding: 0;
 	font-family: "Maxa Grotesk", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
@@ -428,7 +428,7 @@ background: linear-gradient(0deg,rgba(0, 204, 204, 1) 0%, rgba(96, 0, 191, 1) 40
 	position: relative;
 	width: 100%;
 	max-width: 100%;
-	scroll-margin-top: 5em;
+	scroll-margin-top: 50px;
 }
 /* main */
 .maxa-megakoncert .section-banner {
@@ -568,12 +568,21 @@ background: linear-gradient(0deg,rgba(0, 204, 204, 1) 0%, rgba(96, 0, 191, 1) 40
 	object-fit: contain;
 }
 .maxa-megakoncert .text-button-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 0 0 1em;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: 20px;
+	padding: 0 0 1em;
 }
 .maxa-megakoncert .text-block-inner {
 	width: 100%;
@@ -709,12 +718,24 @@ background: linear-gradient(0deg,rgba(0, 204, 204, 1) 0%, rgba(96, 0, 191, 1) 40
 		padding-top: 2em;
 	}
 	.maxa-megakoncert .text-button-inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
-	    justify-content: space-between;
-	    align-items: center;
-	    gap: 0;
-	    padding: 1em 0 0;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		gap: 0;
+		padding: 1em 0 0;
+	}
+	.maxa-megakoncert .section {
+		scroll-margin-top: 5em;
 	}
 }
 
@@ -726,9 +747,18 @@ background: linear-gradient(0deg,rgba(0, 204, 204, 1) 0%, rgba(96, 0, 191, 1) 40
 		height: 100%;
 	}
 	.maxa-megakoncert .navigation-wrapper-desktop {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
 		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		width: 100%;
 		position: fixed;
